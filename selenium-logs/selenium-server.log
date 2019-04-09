@@ -1,24 +1,36 @@
-13:01:23.937 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-13:01:23.986 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4445
-2019-04-09 13:01:24.022:INFO::main: Logging initialized @226ms to org.seleniumhq.jetty9.util.log.StdErrLog
-13:01:24.187 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-13:01:24.264 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
-13:01:24.572 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+14:15:41.015 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+14:15:41.066 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4445
+2019-04-09 14:15:41.103:INFO::main: Logging initialized @237ms to org.seleniumhq.jetty9.util.log.StdErrLog
+14:15:41.274 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+14:15:41.354 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4445
+14:15:41.853 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "acceptSslCerts": true,
   "browserName": "firefox",
   "javascriptEnabled": true,
+  "marionette": true,
   "name": "Login Tests"
 }
-13:01:24.574 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
-1554829285770	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/1z/vlzwms_d6cq4lfr0hk3bcdl40000gn/T/rust_mozprofile.Q15rAwEIL1FK"
-1554829286155	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1554829286155	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1554829286155	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1554829287423	Marionette	INFO	Listening on port 50921
-13:01:27.543 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
-13:01:27.567 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session fba5f01f-555f-714a-9b05-e96f6edf6d92 (org.openqa.selenium.firefox.GeckoDriverService)
+14:15:41.853 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptSslCerts": true,
+  "browserName": "safari",
+  "javascriptEnabled": true,
+  "name": "Login Tests"
+}
+14:15:41.855 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.safari.SafariDriverService)
+14:15:41.855 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1554833742053	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/1z/vlzwms_d6cq4lfr0hk3bcdl40000gn/T/rust_mozprofile.ZD1gOBq2TqU7"
+1554833742429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554833742429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554833742429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+14:15:42.586 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+14:15:42.614 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session CD7BF057-001E-4433-9848-CABC034E73F4 (org.openqa.selenium.safari.SafariDriverService)
+1554833743760	Marionette	INFO	Listening on port 53601
+14:15:43.832 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+14:15:43.835 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 3e008f85-0efa-054d-87c1-3861009d422a (org.openqa.selenium.firefox.GeckoDriverService)
 JavaScript warning: http://testing-ground.scraping.pro/js/vendor/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 JavaScript warning: http://testing-ground.scraping.pro/js/vendor/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
-1554829289447	Marionette	INFO	Stopped listening on port 50921
-JavaScript error: jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/nsUrlClassifierListManager.js, line 597: TypeError: this.tablesData[table] is undefined
-13:01:29.871 INFO [ActiveSessions$1.onStop] - Removing session fba5f01f-555f-714a-9b05-e96f6edf6d92 (org.openqa.selenium.firefox.GeckoDriverService)
+JavaScript warning: http://testing-ground.scraping.pro/js/vendor/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://testing-ground.scraping.pro/js/vendor/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1554833752356	Marionette	INFO	Stopped listening on port 53601
+14:15:52.721 INFO [ActiveSessions$1.onStop] - Removing session 3e008f85-0efa-054d-87c1-3861009d422a (org.openqa.selenium.firefox.GeckoDriverService)
+14:15:53.056 INFO [ActiveSessions$1.onStop] - Removing session CD7BF057-001E-4433-9848-CABC034E73F4 (org.openqa.selenium.safari.SafariDriverService)

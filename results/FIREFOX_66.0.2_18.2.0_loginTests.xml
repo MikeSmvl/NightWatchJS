@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="2">
+            tests="4">
 
   <testsuite name="loginTests"
     errors="0" failures="0" hostname="" id="" package="loginTests" skipped="0"
-    tests="2" time="1.858" timestamp="">
+    tests="4" time="8.874" timestamp="">
   
-    <testcase name="Successful credential login with text validation" classname="loginTests" time="1.385" assertions="5">
+    <testcase name="Successful credential login with text validation" classname="loginTests" time="2.191" assertions="5">
 
     
 
@@ -20,7 +20,33 @@
     
     </testcase>
   
-    <testcase name="Invalid credential login with text and text validation" classname="loginTests" time="0.4730" assertions="5">
+    <testcase name="Successful credential login with image validation" classname="loginTests" time="2.827" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid credential login with text and text validation" classname="loginTests" time="0.4320" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid credential login with text and image validation" classname="loginTests" time="3.424" assertions="5">
 
     
 
