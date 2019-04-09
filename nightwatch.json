@@ -1,0 +1,38 @@
+{
+  "src_folders": ["./tests"],
+  "output_folder": "./results",
+  "custom_commands_path": "./commands",
+  "custom_assertions_path": "./assertions",
+  "page_objects_path": "",
+  "globals_path": "",
+
+  "selenium": {
+    "start_process": true,
+    "server_path": "./selenium-server-standalone-3.141.59.jar",
+    "log_path": "./selenium-logs",
+    "port": 4445,
+    "cli_args": {
+      "webdriver.gecko.driver": "/usr/local/bin/geckodriver"
+    }
+  },
+
+  "test_settings": {
+    "default": {
+      "launch_url": "http://localhost",
+      "selenium_port": 4445,
+      "selenium_host": "localhost",
+      "silent": true,
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+    "firefox": {
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "marionette": true
+      }
+    }
+  }
+}
