@@ -6,12 +6,18 @@
   "page_objects_path": "",
   "globals_path": "",
 
+  "test_workers": {
+    "enabled": true,
+    "workers": "auto"
+  },
+
   "selenium": {
     "start_process": true,
     "server_path": "./selenium-server-standalone-3.141.59.jar",
     "log_path": "./selenium-logs",
     "port": 4445,
     "cli_args": {
+      "webdriver.safari.driver": "/usr/bin/safaridriver",
       "webdriver.gecko.driver": "/usr/local/bin/geckodriver"
     }
   },
@@ -26,6 +32,12 @@
         "browserName": "firefox",
         "javascriptEnabled": true,
         "acceptSslCerts": true
+      }
+    },
+    "safari": {
+      "launch_url": "localhost",
+      "desiredCapabilities": {
+        "browserName": "safari"
       }
     },
     "firefox": {
