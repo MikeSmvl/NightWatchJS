@@ -9,11 +9,7 @@ module.exports = {
     client
       .url('http://testing-ground.scraping.pro/login')
       .waitForElementPresent('body', 1000)
-      .waitForElementVisible('input[id=usr]', 1000)
-      .setValue('input[id=usr]', usr)
-      .waitForElementVisible('input[id=pwd]', 2000)
-      .setValue('input[id=pwd]', [pwd, client.Keys.ENTER])
-      .waitForElementVisible('div[id=case_login]', 1000)
+      .login(usr, pwd)
       .assert.containsText('#content', 'WELCOME :)');
   },
 
@@ -21,11 +17,7 @@ module.exports = {
     client
       .url('http://testing-ground.scraping.pro/login')
       .waitForElementPresent('body', 1000)
-      .waitForElementVisible('input[id=usr]', 1000)
-      .setValue('input[id=usr]', usr)
-      .waitForElementVisible('input[id=pwd]', 2000)
-      .setValue('input[id=pwd]', [pwd, client.Keys.ENTER])
-      .waitForElementVisible('div[id=case_login]', 1000)
+      .login(usr, pwd)
       .assert.containsText('#content', 'ACCESS DENIED!');
   }
 };
