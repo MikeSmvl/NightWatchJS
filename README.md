@@ -8,9 +8,11 @@ Haivision - SDET Intern Node.js/JavaScript Project
 
 ### Prerequisites
 
-[Node.js installed](https://nodejs.org/en/)
+1. [Node.js installed](https://nodejs.org/en/)
 
-Nightwatch installed globally
+2. Chromedriver, geckodriver or safaridriver installed in the `/usr/local/bin/` directory
+
+3. Nightwatch installed globally
 
 ```
 npm install -g nightwatch
