@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
+            failures="0"
             tests="4">
 
   <testsuite name="loginTests"
-    errors="0" failures="1" hostname="" id="" package="loginTests" skipped="0"
-    tests="4" time="10.41" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="loginTests" skipped="0"
+    tests="4" time="9.399" timestamp="">
   
-    <testcase name="Successful credential login with text validation" classname="loginTests" time="2.497" assertions="5">
+    <testcase name="Successful credential login with text validation" classname="loginTests" time="1.472" assertions="5">
 
     
 
@@ -20,7 +20,7 @@
     
     </testcase>
   
-    <testcase name="Successful credential login with image validation" classname="loginTests" time="4.441" assertions="5">
+    <testcase name="Successful credential login with image validation" classname="loginTests" time="3.680" assertions="5">
 
     
 
@@ -33,7 +33,7 @@
     
     </testcase>
   
-    <testcase name="Invalid credential login with text and text validation" classname="loginTests" time="0.5300" assertions="5">
+    <testcase name="Invalid credential login with text and text validation" classname="loginTests" time="0.5950" assertions="5">
 
     
 
@@ -46,7 +46,7 @@
     
     </testcase>
   
-    <testcase name="Invalid credential login with text and image validation" classname="loginTests" time="2.947" assertions="5">
+    <testcase name="Invalid credential login with text and image validation" classname="loginTests" time="3.652" assertions="5">
 
     
 
@@ -54,17 +54,9 @@
 
     
 
-      <failure message="Screenshots Match Failed for login-denied-baseline.png with a tolerance of 5%.
-   Screenshots at:
-    Baseline: tests/screenshots/baseline/login-denied-baseline.png
-    Result: tests/screenshots/results/login-denied-baseline.png
-    Diff: tests/screenshots/diffs/login-denied-baseline.png
-   Open tests/screenshots/diffs/login-denied-baseline.png to see how the screenshot has changed.
-   If the Result Screenshot is correct you can use it to update the Baseline Screenshot and re-run your test:
-    cp tests/screenshots/results/login-denied-baseline.png tests/screenshots/baseline/login-denied-baseline.png in 1000 ms. - expected [0;32m&#34;5&#34;[0m but got: [0;31m&#34;5.04&#34;[0m">    at NightwatchAPI.&lt;anonymous&gt; (/Users/mike/Documents/GitHub/NightWatchJS/commands/compareScreenshot.js:7:17)
-    at FSReqCallback.args [as oncomplete] (fs.js:145:20)</failure>
+    
 
-    <failure message="    at NightwatchAPI.&lt;anonymous&gt; (/Users/mike/Documents/GitHub/NightWatchJS/commands/compareScreenshot.js:7:17)">    at FSReqCallback.args [as oncomplete] (fs.js:145:20)</failure>
+    
     </testcase>
   
 
