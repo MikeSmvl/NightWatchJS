@@ -6,6 +6,40 @@
 
 Haivision - SDET Intern Node.js/JavaScript Project
 
+### Prerequisites
+
+[Node.js installed](https://nodejs.org/en/)
+
+Nightwatch installed globally
+
+```
+npm install -g nightwatch
+```
+
+### Installing
+
+Clone the repository
+```
+git clone https://github.com/MikeSmvl/NightWatchJS.git 
+```
+
+Install the dependencies
+```
+npm install
+```
+
+## Running the tests
+
+Running using the default browser (chrome)
+```
+npm test
+```
+
+Running in parallel in multiple browsers (chrome,firefox,safari)
+```
+nightwatch -e chrome,firefox,safari
+```
+
 ## Built With
 
 * [Node.js](https://nodejs.org/en/) - JavaScript runtime environment
