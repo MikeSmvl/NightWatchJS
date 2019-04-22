@@ -18,8 +18,8 @@
     "port": 4445,
     "cli_args": {
       "webdriver.safari.driver": "/usr/bin/safaridriver",
-      "webdriver.gecko.driver": "/usr/local/bin/geckodriver",
-      "webdriver.chrome.driver": "/usr/local/bin/chromedriver"
+      "webdriver.gecko.driver": "./node_modules/geckodriver/bin/geckodriver",
+      "webdriver.chrome.driver": "./node_modules/chromedriver/bin/chromedriver"
     }
   },
 
@@ -30,10 +30,12 @@
       "selenium_host": "localhost",
       "silent": true,
       "desiredCapabilities": {
-        "browserName": "chrome",
+        "browserName": "firefox",
         "javascriptEnabled": true,
         "acceptSslCerts": true
-      }
+      },
+      "end_session_on_fail": false,
+      "skip_testcases_on_fail": false
     },
     "safari": {
       "desiredCapabilities": {
