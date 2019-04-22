@@ -7,7 +7,7 @@ module.exports = {
   // Connect to the webpage and login before each test case
   beforeEach: function(client, done) {
     client
-      .resizeWindow(1680, 968, done) // Baseline images were taken using these dimensions (1680x1200)
+      .resizeWindow(1680, 968, done) // Baseline images were taken using these dimensions (1680x968)
       .url('http://testing-ground.scraping.pro/login')
       .waitForElementPresent('body', 1000);
   },
@@ -17,9 +17,14 @@ module.exports = {
   },
 
   'Successful credential login with image validation': function(client) {
-    client.login(usr, pwd).pause(1000, function(result) {
-      client.compareScreenshot('login-success-baseline.png');
-    });
+    client
+      .login(usr, pwd)
+      .element('css selector', '#case_login', function(result) {
+        if (result.status != -1) {
+          //Element exists, do something
+          client.compareScreenshot('login-success-baseline.png');
+        }
+      });
   },
 
   'Invalid credential login with text and text validation': function(client) {
@@ -31,8 +36,11 @@ module.exports = {
   'Invalid credential login with text and image validation': function(client) {
     client
       .login('invalid', 'credential')
-      .pause(1000, function(result) {
-        client.compareScreenshot('login-denied-baseline.png');
+      .element('css selector', '#case_login', function(result) {
+        if (result.status != -1) {
+          //Element exists, do something
+          client.compareScreenshot('login-denied-baseline.png');
+        }
       })
       .end();
   }
