@@ -13,35 +13,29 @@ module.exports = {
   },
 
   'Successful credential login with text validation': function(client) {
-    client.login(usr, pwd).assert.containsText('#content', 'WELCOME :)');
+    client
+      .login(usr, pwd)
+      .assert.containsText('h3[class=success]', 'WELCOME :)');
   },
 
   'Successful credential login with image validation': function(client) {
     client
       .login(usr, pwd)
-      .element('css selector', '#case_login', function(result) {
-        if (result.status != -1) {
-          //Element exists, do something
-          client.compareScreenshot('login-success-baseline.png');
-        }
-      });
+      .waitForElementVisible('h3[class=success]', 6000)
+      .compareScreenshot('login-success-baseline.png');
   },
 
   'Invalid credential login with text and text validation': function(client) {
     client
       .login('invalid', 'credential')
-      .assert.containsText('#content', 'ACCESS DENIED!');
+      .assert.containsText('h3[class=error]', 'ACCESS DENIED!');
   },
 
   'Invalid credential login with text and image validation': function(client) {
     client
       .login('invalid', 'credential')
-      .element('css selector', '#case_login', function(result) {
-        if (result.status != -1) {
-          //Element exists, do something
-          client.compareScreenshot('login-denied-baseline.png');
-        }
-      })
+      .waitForElementVisible('h3[class=error]', 6000)
+      .compareScreenshot('login-denied-baseline.png')
       .end();
   }
 };
