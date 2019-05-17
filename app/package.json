@@ -1,0 +1,24 @@
+{
+  "name": "nightwatchjs",
+  "version": "1.0.0",
+  "description": "Haivision - SDET Intern Node.js/JavaScript Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeSmvl/NightWatchJS.git"
+  },
+  "author": "Mikael Samvelian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeSmvl/NightWatchJS/issues"
+  },
+  "homepage": "https://github.com/MikeSmvl/NightWatchJS#readme",
+  "dependencies": {
+    "nightwatch": "^1.0.19",
+    "node-resemble-js": "^0.2.0",
+    "shelljs": "^0.8.3"
+  }
+}

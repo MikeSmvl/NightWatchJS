@@ -8,14 +8,12 @@ Haivision - SDET Intern Node.js/JavaScript Project
 
 ### Prerequisites
 
-1. [Node.js installed](https://nodejs.org/en/)
+1. [Docker installed](http://www.lmgtfy.com/?q=how+to+install+docker)
 
-2. Chromedriver, geckodriver or safaridriver installed in the `/usr/local/bin/` directory
-
-3. Nightwatch installed globally
+2. Make sure the bridge network's gateway is "172.17.0.1" in Docker. If it is not the same, make sure to change the "selenium_host" in app/nightwatch.json to match your gateway.
 
 ```
-npm install -g nightwatch
+docker inspect bridge
 ```
 
 ### Installing
@@ -24,22 +22,21 @@ Clone the repository
 ```
 git clone https://github.com/MikeSmvl/NightWatchJS.git 
 ```
-
-Install the dependencies
+Navigate inside the repository
 ```
-npm install
+cd [path-to-repo]
+```
+Build the image from the Dockerfile and run selenium-chrome
+```
+docker-compose build
+docker-compose up -d chrome
 ```
 
 ## Running the tests
 
-Running using the default browser (chrome)
+Run the nightwatch tests
 ```
-npm test
-```
-
-Running in parallel in multiple browsers (chrome,firefox,safari)
-```
-nightwatch -e chrome,firefox,safari
+docker-compose run --rm nightwatch
 ```
 
 ## Built With

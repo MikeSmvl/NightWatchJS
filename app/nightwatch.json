@@ -1,0 +1,52 @@
+{
+  "src_folders": ["./tests"],
+  "output_folder": "./results",
+  "custom_commands_path": "./commands",
+  "custom_assertions_path": "./assertions",
+  "page_objects_path": "",
+  "globals_path": "",
+
+  "test_workers": {
+    "enabled": true,
+    "workers": "auto"
+  },
+
+  "selenium": {
+    "start_process": false
+  },
+
+  "test_settings": {
+    "default": {
+      "selenium_port": 4444,
+      "selenium_host": "172.17.0.1",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      },
+      "end_session_on_fail": false,
+      "skip_testcases_on_fail": false
+    },
+    "safari": {
+      "desiredCapabilities": {
+        "browserName": "safari"
+      }
+    },
+    "firefox": {
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "marionette": true
+      }
+    },
+    "chrome": {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions" : {
+          "args" : ["--no-sandbox"]
+        }
+      }
+    }
+  }
+}
